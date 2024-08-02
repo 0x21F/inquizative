@@ -14,51 +14,51 @@ const (
 )
 
 type CanvasFile struct {
-	Id               int
-	Uuid             string
-	Folder_Id        int
-	Display_Name     string
-	Filename         string
-	Content_Type     string
-	Created_At       time.Time
-	Updated_At       time.Time
-	Unlock_At        time.Time
-	Locked           bool
-	Hidden           bool
-	Lock_At          time.Time
-	Hidden_For_User  bool
-	Visibility       Visibility
-	Thumbnail_Url    string
-	Modified_At      time.Time
-	Mime_Class       string
-	Media_Entry_Id   string
-	Locked_For_User  bool
-	Lock_Info        string
-	Lock_Explanation string
-	Preview_Url      string
+	Id              int        `json:"id"`
+	Uuid            string     `json:"uuid"`
+	FolderId        int        `json:"folder_id"`
+	DisplayName     string     `json:"display_name"`
+	Filename        string     `json:"filename"`
+	ContentType     string     `json:"content_type"`
+	CreatedAt       time.Time  `json:"created_at"`
+	UpdatedAt       time.Time  `json:"updated_at"`
+	UnlockAt        time.Time  `json:"unlock_at"`
+	Locked          bool       `json:"locked"`
+	Hidden          bool       `json:"hidden"`
+	LockAt          time.Time  `json:"lock_at"`
+	HiddenForUser   bool       `json:"hidden_for_user"`
+	Visibility      Visibility `json:"visibility"`
+	ThumbnailUrl    string     `json:"thumbnail_url"`
+	ModifiedAt      time.Time  `json:"modified_at"`
+	MimeClass       string     `json:"mime_class"`
+	MediaEntryId    string     `json:"media_entry_id"`
+	LockedForUser   bool       `json:"locked_for_user"`
+	LockInfo        string     `json:"lock_info"`
+	LockExplanation string     `json:"lock_explanation"`
+	PreviewUrl      string     `json:"preview_url"`
 }
 
 type CanvasFolder struct {
-	Context_Type     string
-	Context_Id       int
-	Files_Count      int
-	Position         int
-	Updated_At       time.Time
-	Folders_Url      string
-	Files_Url        string
-	Full_Name        string
-	Lock_At          time.Time
-	Id               int
-	Folders_Count    int
-	Name             string
-	Parent_Folder_Id int
-	Created_At       time.Time
-	Unlock_At        time.Time
-	Hidden           bool
-	Hidden_For_User  bool
-	Locked           bool
-	Locked_For_User  bool
-	For_Submissions  bool
+	ContextType    string    `json:"context_type"`
+	ContextId      int       `json:"context_id"`
+	FilesCount     int       `json:"files_count"`
+	Position       int       `json:"position"`
+	UpdatedAt      time.Time `json:"updated_at"`
+	FoldersUrl     string    `json:"folders_url"`
+	FilesUrl       string    `json:"files_url"`
+	FullName       string    `json:"full_name"`
+	LockAt         time.Time `json:"lock_at"`
+	Id             int       `json:"id"`
+	FoldersCount   int       `json:"folders_count"`
+	Name           string    `json:"name"`
+	ParentFolderId int       `json:"parent_folder_id"`
+	CreatedAt      time.Time `json:"created_at"`
+	UnlockAt       time.Time `json:"unlock_at"`
+	Hidden         bool      `json:"hidden"`
+	HiddenForUser  bool      `json:"hidden_for_user"`
+	Locked         bool      `json:"locked"`
+	LockedForUser  bool      `json:"locked_for_user"`
+	ForSubmissions bool      `json:"for_submissions"`
 }
 
 type Justification string
@@ -72,19 +72,12 @@ const (
 )
 
 type UsageRights struct {
-	legal_copyright string
-	// Justification for using the file in a Canvas course. Valid values are
-	// 'own_copyright', 'public_domain', 'used_by_permission', 'fair_use',
-	// 'creative_commons'
-	use_justification Justification
-	// License identifier for the file.
-	license string
-	// Readable license name
-	license_name string
-	// Explanation of the action performed
-	message string
-	// List of ids of files that were updated
-	file_ids []int
+	LegalCopyright   string        `json:"legal_copyright"`
+	UseJustification Justification `json:"use_justification"`
+	License          string        `json:"license"`
+	LicenseName      string        `json:"license_name"`
+	Message          string        `json:"message"`
+	FileIDs          []int         `json:"file_ids"`
 }
 
 type License struct {
