@@ -1,5 +1,5 @@
 package main
 
-const UPTABLE string = `
-CREATE TABLE 
+const UP_TABLES string = `
+	CREATE TABLE 
 `
