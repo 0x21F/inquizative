@@ -2,7 +2,7 @@ import franken from 'franken-ui/shadcn-ui/preset-quick';
 
 /** @type {import('tailwindcss').Config} */
 export default {
-	presets: [franken({theme: "green"})],
+	presets: [franken({theme: "stone"})],
 	content: [],
 	safelist: [
 		{

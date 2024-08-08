@@ -28,14 +28,14 @@ type CanvasFile struct {
 	LockAt          time.Time  `json:"lock_at"`
 	HiddenForUser   bool       `json:"hidden_for_user"`
 	Visibility      Visibility `json:"visibility"`
-	ThumbnailUrl    string     `json:"thumbnail_url"`
+	ThumbnailUrl    string     `json:"thumbnail_url,omitempty"`
 	ModifiedAt      time.Time  `json:"modified_at"`
 	MimeClass       string     `json:"mime_class"`
 	MediaEntryId    string     `json:"media_entry_id"`
 	LockedForUser   bool       `json:"locked_for_user"`
-	LockInfo        string     `json:"lock_info"`
+	LockInfo        string     `json:"lock_info,omitempty"`
 	LockExplanation string     `json:"lock_explanation"`
-	PreviewUrl      string     `json:"preview_url"`
+	PreviewUrl      string     `json:"preview_url,omitempty"`
 }
 
 type CanvasFolder struct {
@@ -47,13 +47,13 @@ type CanvasFolder struct {
 	FoldersUrl     string    `json:"folders_url"`
 	FilesUrl       string    `json:"files_url"`
 	FullName       string    `json:"full_name"`
-	LockAt         time.Time `json:"lock_at"`
+	LockAt         time.Time `json:"lock_at,omitempty"`
 	Id             int       `json:"id"`
 	FoldersCount   int       `json:"folders_count"`
 	Name           string    `json:"name"`
 	ParentFolderId int       `json:"parent_folder_id"`
 	CreatedAt      time.Time `json:"created_at"`
-	UnlockAt       time.Time `json:"unlock_at"`
+	UnlockAt       time.Time `json:"unlock_at,omitempty"`
 	Hidden         bool      `json:"hidden"`
 	HiddenForUser  bool      `json:"hidden_for_user"`
 	Locked         bool      `json:"locked"`

@@ -1,5 +1,5 @@
 # An AI Study Tool
-Inquizative is a LLM aided study tool with a deep integration with Canvas LMS.
+Inquizative is a LLM aided study tool ~~with a deep integration with Canvas LMS~~.
 It utilizes HTMX, Templ, and Go for all views, along with turso for 
 the database. 
 

@@ -1,17 +1,17 @@
 # NECESSARY
-- [ ] Get canvas API docs to function (shittily implemented swagger 1.2)
-- [ ] Get ChatGPT key
-- [ ] 
+- [ ] (POSTPONED)Get canvas API docs to function (shittily implemented swagger 1.2)
+- [ ] set up fly gpus and ollama
 
 # backend
-- [ ] Canvas url from university using [this](https://canvas.instructure.com/api/v1/accounts/search?name=&per_page=20000)
-- [ ] Cache Results from this for latency purposes^
+- [ ] (POSTPONED)Canvas url from university using [this](https://canvas.instructure.com/api/v1/accounts/search?name=&per_page=20000)
 - [ ] Auth
 - [ ] Document ingress system, estimate cost per document
     - Doc parsing
     - maybe OCR?
+- [ ] write my own parser for docx, pdf, rtf, pptx. 
+- [ ] get rid of docconv or run it as a service. 
 
 # features 
 - [ ] flashcards
 - [ ] quizzes
-- [ ] quiz analysis
+- [ ] (POSTPONED for canvas) quiz analysis
