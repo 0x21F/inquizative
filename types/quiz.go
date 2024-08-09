@@ -1,4 +1,4 @@
-package edu
+package types
 
 import (
 	"time"

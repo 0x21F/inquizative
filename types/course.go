@@ -1,4 +1,4 @@
-package edu
+package types
 
 import (
 	"context"
@@ -16,13 +16,15 @@ type Course struct {
 }
 
 type Topic struct {
+	TopicID   []byte
 	Name      string
 	Summaries []*Summary
 }
 
 type Summary struct {
-	Content  string `json:"content"`
-	Filename string
+	SummaryID []byte
+	Content   string `json:"content"`
+	Filename  string
 }
 
 func GenerateSummary(client api.Client, filename, courseName string, file io.Reader) (*Summary, error) {
@@ -33,7 +35,7 @@ func GenerateSummary(client api.Client, filename, courseName string, file io.Rea
 
 	req := &api.GenerateRequest{
 		Model:  "llama3.1",
-		System: "You are an instructor for the course " + courseName + ". Read the following text, summarize it, and respond in Json. The summary should be sent with the name \"content\"",
+		System: "You are an instructor for the course " + courseName + ". Read the following text, summarize it, and respond in json. The summary should be sent with the name \"content\"",
 		Prompt: fileContents,
 		Stream: new(bool),
 	}
