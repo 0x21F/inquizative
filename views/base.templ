@@ -4,14 +4,14 @@ templ Base(title string) {
 	<!DOCTYPE html>
 	<html lang="en">
 		<head>
-			<title>{title}</title>
+			<title>{ title }</title>
 			<meta charset="UTF-8"/>
 			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 			<link rel="stylesheet" href="/public/styles.css"/>
 			<script src="https://unpkg.com/htmx.org@2.0.1" defer></script>
 		</head>
-		<body>
-			<div name="inquizativeContainer">
+		<body class="bg-background font-geist-sans text-foreground antialiased">
+			<div name="inquizativeContainer dark">
 				{ children... }
 			</div>
 		</body>

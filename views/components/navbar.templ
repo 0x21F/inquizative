@@ -1,14 +1,26 @@
-package componenents
+package components
 
 templ Navbar() {
+		<nav class="uk-navbar-container" uk-navbar>
+			<div class="uk-container">
+				<div class="uk-navbar">
+					<div class="uk-navbar-left">
+						<a class="uk-navbar-item uk-logo" href="/" aria-label="return home">Inquizative</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+}
+
+templ NavbarSigned() {
 	<nav class="uk-navbar-container" uk-navbar>
 		<div class="uk-container">
-			<div class="uk-navbar"> 
+			<div class="uk-navbar">
 				<div class="uk-navbar-left">
-					<a class="uk-navbar-item uk-logo" href="/" aria-label="return home"
-					>text</a>
+					<a class="uk-navbar-item uk-logo" href="/" aria-label="return home">Inquizative</a>
 				</div>
 			</div>
 		</div>
 	</nav>
+
 }

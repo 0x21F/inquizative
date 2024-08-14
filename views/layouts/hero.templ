@@ -1,10 +1,24 @@
 package layouts
 
 import "github.com/0x21F/inquizative/views"
-
+import "github.com/0x21F/inquizative/views/components"
 
 templ Hero() {
 	@views.Base("Inquizative") {
-		
+		@components.Navbar()
+		<div class="uk-container uk-responsive-height uk-flex uk-verti">
+			<div class="uk-card uk-card-body uk-flex-left uk-width-1-2 uk-align uk-height-large">
+				<h3 class="uk-card-title">Embrace a new way study</h3>
+				<p class="uk-margin">
+				    Testing this to see how it looks
+				</p>
+			</div>
+			<div class="uk-container uk-flex-right">
+				<p>
+				    testing 2 to see how this works
+				</p>
+			</div>
+		</div>
+		@components.Footbar()
 	}
 }

@@ -1,7 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"github.com/0x21F/inquizative/routes"
+)
 
 func main() {
-	fmt.Println("vim-go")
+	controller := routes.RouteController{}
+	e := controller.ToServer()
+
+	e.Start(":8080")
+
 }

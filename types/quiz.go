@@ -1,5 +1,6 @@
 package types
 
+/*
 import (
 	"time"
 
@@ -66,4 +67,4 @@ func (q FRQuestion) score() float32 {
 	}
 
 	return res
-}
+}*/

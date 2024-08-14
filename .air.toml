@@ -2,8 +2,8 @@ root = "."
 tmp_dir = "tmp"
 
 [build]
-  bin = "./tmp/main"
-  cmd = "go build -tags dev -o ./tmp/main . && templ generate"
+  bin = "./bin/fullstackgo"
+  cmd = "make build"
 
   delay = 20
   exclude_dir = ["tmp", "node_modules", "static"]
