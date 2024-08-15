@@ -2,7 +2,7 @@ root = "."
 tmp_dir = "tmp"
 
 [build]
-  bin = "./bin/fullstackgo"
+  bin = "./bin/inquizative"
   cmd = "make build"
 
   delay = 20

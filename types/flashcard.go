@@ -5,23 +5,21 @@ import (
 	"context"
 	"database/sql"
 	"encoding/json"
-	"time"
 
 	"github.com/ollama/ollama/api"
 )
+
+type FlashCardDeck struct {
+	Deck   []FlashCard `json:"deck"`
+	DeckID []byte
+	UserId []byte
+}
 
 type FlashCard struct {
 	FlashCardID     []byte
 	Front           string `json:"front"`
 	Content         string `json:"content"`
 	AdditionalNotes string `json:"additional_notes,omitempty"`
-}
-
-type FlashCardDeck struct {
-	Deck         []FlashCard `json:"deck"`
-	DeckID       []byte
-	UserId       []byte
-	CreationDate time.Time
 }
 
 func GenerateFlashCardDeck(client api.Client, topic Topic) (*FlashCardDeck, error) {
@@ -61,8 +59,6 @@ func GenerateFlashCardDeck(client api.Client, topic Topic) (*FlashCardDeck, erro
 	if err != nil {
 		return nil, err
 	}
-
-	res.CreationDate = time.Now()
 
 	return res, nil
 }

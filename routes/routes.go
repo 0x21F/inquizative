@@ -13,8 +13,9 @@ type RouteController struct {
 	db *sql.DB
 }
 
-func (h *RouteController) ToServer() *echo.Echo {
+func (h *RouteController) ToServer(db *sql.DB) *echo.Echo {
 	e := echo.New()
+	h.db = db
 
 	e.Use(middleware.Logger())
 	e.Static("/public", "static")
